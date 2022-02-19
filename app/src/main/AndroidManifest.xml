@@ -13,6 +13,21 @@
         android:theme="@style/Theme.RPS"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".presentation.registration.ChooseStatusRegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.registration.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.main_navigation.MainNavigationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".presentation.unregistered.UnregisteredActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.login.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.MainActivity"
             android:exported="true">
             <intent-filter>
