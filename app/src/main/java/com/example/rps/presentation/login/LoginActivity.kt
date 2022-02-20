@@ -8,6 +8,8 @@ import androidx.activity.viewModels
 import com.example.rps.databinding.ActivityLoginBinding
 import com.example.rps.presentation.FirebaseViewModel
 import com.example.rps.presentation.main_navigation.MainNavigationActivity
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.Exception
 
@@ -23,12 +25,11 @@ class LoginActivity : AppCompatActivity() {
 
         binding.loginButton.setOnClickListener {
             try {
-                viewModel.auth.signInWithEmailAndPassword(
+                Firebase.auth.signInWithEmailAndPassword(
                     binding.emailEditText.text.toString(),
                     binding.passwordEditText.text.toString()
                 ).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        viewModel.currentUser = viewModel.auth.currentUser
                         startActivity(Intent(this, MainNavigationActivity::class.java))
                     } else {
                         Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show()

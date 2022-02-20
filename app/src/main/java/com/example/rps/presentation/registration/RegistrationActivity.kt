@@ -7,10 +7,11 @@ import androidx.activity.viewModels
 import com.example.rps.databinding.ActivityRegistrationBinding
 import com.example.rps.presentation.FirebaseViewModel
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.Exception
 
-@AndroidEntryPoint
 class RegistrationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegistrationBinding
     private val viewModel: FirebaseViewModel by viewModels()
@@ -26,12 +27,12 @@ class RegistrationActivity : AppCompatActivity() {
     private fun register() {
         if (binding.passwordEditText.text.toString() == binding.repasswordEditText.text.toString()) {
             try {
-                viewModel.auth.createUserWithEmailAndPassword(
+                Firebase.auth.createUserWithEmailAndPassword(
                     binding.emailEditText.text.toString(),
                     binding.passwordEditText.text.toString()
                 ).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        val currentUser = viewModel.auth.currentUser
+                        val currentUser = Firebase.auth.currentUser
                         val currentUserInDB =
                             viewModel.databaseReference.child((currentUser?.uid!!))
                         currentUserInDB.child("Login")
