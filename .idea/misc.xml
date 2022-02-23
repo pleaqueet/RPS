@@ -7,16 +7,27 @@
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/drawable/bottom_nav_gradient.xml" value="0.3927083333333333" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/drawable/ic_baseline_gamepad_24.xml" value="0.3927083333333333" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/drawable/ic_edit_text.xml" value="0.24802631578947368" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/drawable/ic_footer_corners.xml" value="0.24802631578947368" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/drawable/ic_header_corner.xml" value="0.24802631578947368" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/drawable/ic_main_corners.xml" value="0.24802631578947368" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/drawable/ic_profile.xml" value="0.24802631578947368" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/drawable/ic_search.xml" value="0.24802631578947368" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/activity_choose_status_registration.xml" value="0.23782894736842106" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/activity_main_navigation.xml" value="0.18" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/activity_main_business_navigation.xml" value="0.23782894736842106" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/activity_main_navigation.xml" value="0.23782894736842106" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/activity_registration.xml" value="0.25" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/activity_unregistered.xml" value="0.22" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/console_item.xml" value="0.23782894736842106" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/fragment_console.xml" value="0.23782894736842106" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/fragment_profile.xml" value="0.23782894736842106" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/layout/fragment_search.xml" value="0.23782894736842106" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/menu/main_navigation_items.xml" value="0.3765625" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/menu/main_navigation_items_for_business.xml" value="0.23782894736842106" />
         <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/menu/main_navigation_items_for_user.xml" value="0.23782894736842106" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.24802631578947368" />
+        <entry key="..\:/Users/123/AndroidStudioProjects/RPS/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.24802631578947368" />
       </map>
     </option>
   </component>

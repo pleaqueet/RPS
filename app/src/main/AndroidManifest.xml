@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.rps">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".RPSApplication"
         android:allowBackup="true"
@@ -19,7 +21,7 @@
             android:name=".presentation.registration.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".presentation.main_navigation.MainNavigationActivity"
+            android:name=".presentation.main_business_navigation.MainBusinessNavigationActivity"
             android:exported="true" />
         <activity
             android:name=".presentation.unregistered.UnregisteredActivity"

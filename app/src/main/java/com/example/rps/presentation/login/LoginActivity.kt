@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import com.example.rps.databinding.ActivityLoginBinding
 import com.example.rps.presentation.FirebaseViewModel
-import com.example.rps.presentation.main_navigation.MainNavigationActivity
+import com.example.rps.presentation.main_business_navigation.MainBusinessNavigationActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import dagger.hilt.android.AndroidEntryPoint
@@ -30,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
                     binding.passwordEditText.text.toString()
                 ).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        startActivity(Intent(this, MainNavigationActivity::class.java))
+                        startActivity(Intent(this, MainBusinessNavigationActivity::class.java))
                     } else {
                         Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show()
                     }

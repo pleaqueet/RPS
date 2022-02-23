@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#9F000000</color>
     <color name="main_color">#666666</color>
+    <color name="main_dark_color">#474747</color>
     <color name="header_text">#F5FAC3</color>
     <color name="button_text">#A5BAB1</color>
     <color name="text_hint_color">#9C9C9C</color>

@@ -21,4 +21,10 @@
     <string name="register_email">Email:</string>
     <string name="register_telephone">Телефон:</string>
     <string name="register_city">Город:</string>
+    <string name="best_consoles">Лучшие предложения</string>
+    <string name="city_text_view">Город:\n<font color='#FFFFFFFF'>%1$s</font></string>
+    <string name="games_info_text_view">Игры и доп. информация:\n<font color='#FFFFFFFF'>%1$s</font></string>
+    <string name="weekday_price_text_view">Цена в будни:\n<font color='#FFFFFFFF'>%1$s</font></string>
+    <string name="weekend_price_text_view">Цена в выходные:\n<font color='#FFFFFFFF'>%1$s</font></string>
+    <string name="joypad_count_text_view">Количество джойстиков: <font color='#FFFFFFFF'>%1$s</font></string>
 </resources>

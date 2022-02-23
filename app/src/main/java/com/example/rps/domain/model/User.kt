@@ -15,6 +15,8 @@ data class User(
 
 @IgnoreExtraProperties
 data class Console(
+    var userCity: String? = null,
+    var userName: String? = null,
     val consoleName: String? = null,
     val consoleState: Boolean? = null,
     val gamesInfo: String? = null,
