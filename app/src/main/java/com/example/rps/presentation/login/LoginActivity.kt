@@ -1,19 +1,18 @@
 package com.example.rps.presentation.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.example.rps.databinding.ActivityLoginBinding
+import com.example.rps.domain.model.User
 import com.example.rps.presentation.FirebaseViewModel
 import com.example.rps.presentation.main_business_navigation.MainBusinessNavigationActivity
+import com.example.rps.presentation.main_user_navigation.MainUserNavigationActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import dagger.hilt.android.AndroidEntryPoint
-import java.lang.Exception
 
-@AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private val viewModel: FirebaseViewModel by viewModels()
@@ -22,6 +21,11 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.backButton.setOnClickListener { onBackPressed() }
+
+        binding.recoveryButton.setOnClickListener {
+            startActivity(Intent(this, AccountRecoveryActivity::class.java))
+        }
 
         binding.loginButton.setOnClickListener {
             try {
@@ -30,7 +34,19 @@ class LoginActivity : AppCompatActivity() {
                     binding.passwordEditText.text.toString()
                 ).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        startActivity(Intent(this, MainBusinessNavigationActivity::class.java))
+                        val currentUser = Firebase.auth.currentUser
+                        viewModel.databaseReference.child(currentUser!!.uid).get().addOnCompleteListener {
+                            if (it.isSuccessful && it.result.exists()) {
+                                val user = it.result.getValue(User::class.java)!!
+                                if (user.AccountStatus == true) {
+                                    startActivity(Intent(this, MainBusinessNavigationActivity::class.java))
+                                    finish()
+                                } else {
+                                    startActivity(Intent(this, MainUserNavigationActivity::class.java))
+                                    finish()
+                                }
+                            }
+                        }
                     } else {
                         Toast.makeText(this, "Неверный логин или пароль", Toast.LENGTH_SHORT).show()
                     }

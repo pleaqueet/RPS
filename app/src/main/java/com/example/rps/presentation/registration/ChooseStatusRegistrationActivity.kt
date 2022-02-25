@@ -13,6 +13,8 @@ class ChooseStatusRegistrationActivity : AppCompatActivity() {
         binding = ActivityChooseStatusRegistrationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.backButton.setOnClickListener { onBackPressed() }
+
         binding.forBusinessButton.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
             intent.putExtra("register_status", true)

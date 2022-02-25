@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.unregistered.ChooseCityActivity">
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_margin="20dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <co.lujun.androidtagview.TagContainerLayout
+        android:id="@+id/tag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:padding="30dp"
+        app:container_enable_drag="false"
+        app:horizontal_interval="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tag_clickable="true"
+        app:tag_theme="none"
+        app:tag_text_color="@color/text_hint_color"
+        app:tag_text_size="24sp"
+        app:tag_corner_radius="5dp"
+        app:tag_ripple_color="@color/white"
+        app:tag_border_color="@color/text_hint_color"
+        app:tag_border_width="1dp"
+        app:container_background_color="#00FFFFFF"
+        app:tag_background_color="@color/transparent_tags"
+        app:vertical_interval="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

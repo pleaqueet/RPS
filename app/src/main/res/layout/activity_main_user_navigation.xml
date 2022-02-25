@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.main_business_navigation.MainBusinessNavigationActivity">
+    tools:context=".presentation.main_user_navigation.MainUserNavigationActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
@@ -12,7 +12,7 @@
         android:layout_height="56dp"
         android:layout_gravity="start"
         android:background="@drawable/bottom_nav_gradient"
-        app:menu="@menu/main_navigation_items_for_business"
+        app:menu="@menu/main_navigation_items_for_user"
         app:itemTextColor="@color/bottom_nav_color"
         app:itemIconTint="@color/bottom_nav_color"
         app:layout_constraintBottom_toBottomOf="parent"

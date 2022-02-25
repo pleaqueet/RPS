@@ -16,15 +16,43 @@
     <string name="register_button">Зарегистрироваться</string>
     <string name="register_login">Логин:</string>
     <string name="register_name">Имя:</string>
-    <string name="register_repassword">Повторите пароль:</string>
+    <string name="register_repassword">Повторите\nпароль:</string>
     <string name="register_password">Пароль:</string>
     <string name="register_email">Email:</string>
     <string name="register_telephone">Телефон:</string>
     <string name="register_city">Город:</string>
     <string name="best_consoles">Лучшие предложения</string>
-    <string name="city_text_view">Город:\n<font color='#FFFFFFFF'>%1$s</font></string>
-    <string name="games_info_text_view">Игры и доп. информация:\n<font color='#FFFFFFFF'>%1$s</font></string>
-    <string name="weekday_price_text_view">Цена в будни:\n<font color='#FFFFFFFF'>%1$s</font></string>
-    <string name="weekend_price_text_view">Цена в выходные:\n<font color='#FFFFFFFF'>%1$s</font></string>
-    <string name="joypad_count_text_view">Количество джойстиков: <font color='#FFFFFFFF'>%1$s</font></string>
+    <string name="lk">Личный кабинет</string>
+    <string name="add_console">Добавить консоль</string>
+    <string name="business_account">Бизнес аккаунт</string>
+    <string name="my_consoles">Мои консоли:</string>
+    <string name="add">Добавить</string>
+    <string name="console">Консоль</string>
+    <string name="serial_number">Серийный номер</string>
+    <string name="count_joypads">Количество джойстиков</string>
+    <string name="weekday_price">Цена в будни</string>
+    <string name="weekend_price">Цена в выходные</string>
+    <string name="console_info">Игры и дополнительная информация:</string>
+    <string name="save">Сохранить</string>
+    <string name="free">Свободна</string>
+    <string name="info">Информация</string>
+    <string name="call">Позвонить</string>
+    <string name="recovery_account">Восстановить аккаунт</string>
+    <string name="recovery">Восстановить</string>
+    <string name="recovery_button_text">Забыли пароль?</string>
+    <string-array name="cities">
+        <item>Алматы</item>
+        <item>Нур-Султан</item>
+        <item>Караганды</item>
+        <item>Актау</item>
+        <item>Атырау</item>
+        <item>Павлоград</item>
+        <item>Шышкент</item>
+        <item>Семей</item>
+        <item>Актобе</item>
+        <item>Костанай</item>
+        <item>Кызылорда</item>
+        <item>Тараз</item>
+        <item>Усть-Коменагорск</item>
+    </string-array>
 </resources>

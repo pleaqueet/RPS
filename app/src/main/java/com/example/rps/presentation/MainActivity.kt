@@ -7,6 +7,7 @@ import com.example.rps.databinding.ActivityMainBinding
 import com.example.rps.presentation.login.LoginActivity
 import com.example.rps.presentation.main_business_navigation.MainBusinessNavigationActivity
 import com.example.rps.presentation.registration.ChooseStatusRegistrationActivity
+import com.example.rps.presentation.unregistered.ChooseCityActivity
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -17,13 +18,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val user = Firebase.auth.currentUser
-        if (user != null ) {
-            startActivity(Intent(this, MainBusinessNavigationActivity::class.java))
-        }
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.rentButton.setOnClickListener {
+            startActivity(Intent(this, ChooseCityActivity::class.java))
+        }
 
         binding.loginButton.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
@@ -32,6 +32,5 @@ class MainActivity : AppCompatActivity() {
         binding.registerButton.setOnClickListener {
             startActivity(Intent(this, ChooseStatusRegistrationActivity::class.java))
         }
-
     }
 }

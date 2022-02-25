@@ -5,17 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <TextView
+        android:id="@+id/header_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:background="@drawable/ic_header_corner"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/header_text"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Предложение от: Nikolai" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/ic_main_corners"
+        android:background="@drawable/ic_footer_corners"
         android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/header_text_view">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -31,30 +45,53 @@
             app:layout_constraintVertical_bias="0.0">
 
             <TextView
-                android:id="@+id/console_name_text_view_cn"
+                android:id="@+id/console_name_text_view"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@+id/city_text_view"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Playstation 5" />
 
             <TextView
-                android:id="@+id/serial_number_text_view_cn"
-                android:layout_width="200dp"
+
+                android:id="@+id/weekday_price_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/text_hint_color"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/console_name_text_view"
+                tools:text="Цена в будни:\n250 тенге" />
+
+            <TextView
+                android:id="@+id/weekend_price_text_view"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/text_hint_color"
                 android:textSize="14sp"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/console_name_text_view_cn"
-                tools:text="Серийный номер:\nCO273636" />
+                app:layout_constraintTop_toBottomOf="@+id/weekday_price_text_view"
+                tools:text="Цена в выходные:\n350 тенге" />
 
             <TextView
-                android:id="@+id/games_info_text_view_cn"
+                android:id="@+id/joypad_count_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_hint_color"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weekend_price_text_view"
+                tools:text="Количество джойстиков: 3" />
+
+            <TextView
+                android:id="@+id/games_info_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -63,31 +100,22 @@
                 android:textColor="@color/text_hint_color"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/serial_number_text_view_cn"
+                app:layout_constraintTop_toBottomOf="@+id/joypad_count_text_view"
                 tools:text="Игры и доп. информация:\nКакие-то игры" />
 
-            <ImageView
-                android:id="@+id/free_status_image_view"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_free"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/serial_number_text_view_cn"
-                app:layout_constraintTop_toBottomOf="@+id/free_status_text_view" />
-
             <TextView
-                android:textSize="14sp"
-                android:id="@+id/free_status_text_view"
-                android:layout_width="0dp"
-                android:textAlignment="center"
+                android:id="@+id/city_text_view"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/free"
+                android:textAlignment="center"
+                android:textColor="@color/text_hint_color"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/console_name_text_view_cn"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Свободна" />
+                tools:text="Город:\nАлматы" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
